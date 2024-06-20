@@ -3,7 +3,7 @@
 tests:
   - name: Verificar que index.html no esté vacío
     file_path: index.html
-    expected_content: |expected_content: |
+    expected_content: |expected_content: 
   <!DOCTYPE html>
   <html lang="es">
   <head>
