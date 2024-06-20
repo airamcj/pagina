@@ -3,8 +3,7 @@
 tests:
   - name: Verificar que index.html no esté vacío
     file_path: index.html
-    expected_content: expected_content:
-
+    expected_content: |expected_content: |
   <!DOCTYPE html>
   <html lang="es">
   <head>
@@ -21,15 +20,15 @@ tests:
 
   - name: Verificar que style.css no tenga errores de sintaxis
     file_path: style.css
-    expected_content: expected_content: |
-  body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      color: #333;
-  }
-
-  h1 {
-      color: #0066cc;
-  }
-
+    expected_content: |expected_content: |
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+    }
+  
+    h1 {
+        color: #0066cc;
+    }
+  
       Inserta aquí el contenido esperado en style.css
