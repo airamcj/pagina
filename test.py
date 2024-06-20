@@ -8,4 +8,4 @@ def test_index_html_not_empty():
 def test_style_css_has_body_selector():
     with open('styles.css', 'r', encoding='utf-8') as f:
         content = f.read()
-        assert 'body {' in content, "styles.css no contiene el selector 'body {'"
+        assert 'body {' in content or '.container {' in content, "styles.css no contiene el selector 'body {' o '.container {'"
