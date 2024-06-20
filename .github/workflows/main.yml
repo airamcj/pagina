@@ -1,0 +1,31 @@
+<!-- tests/test_index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba de index.htm</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '../index.htm', true);
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 400) {
+                    // Verificar que el contenido de index.htm no esté vacío
+                    if (xhr.responseText.trim() === '') {
+                        console.error('index.htm está vacío');
+                    }
+                } else {
+                    console.error('No se pudo cargar index.htm');
+                }
+            };
+            xhr.onerror = function() {
+                console.error('Error al cargar index.htm');
+            };
+            xhr.send();
+        };
+    </script>
+</body>
+</html>
